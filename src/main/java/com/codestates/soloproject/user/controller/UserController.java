@@ -52,13 +52,13 @@ public class UserController {
         return new ResponseEntity<>(mapper.userToUserResponse(user), HttpStatus.OK);
     }
 
-    @GetMapping
-    public ResponseEntity getUsers(@Positive @RequestParam int page, @Positive @RequestParam int size) {
-        Page<User> pageUsers = userService.findUsers(page -1, size);
-        List<User> users = pageUsers.getContent();
-
-        return new ResponseEntity(mapper.userToUserResponse(users),HttpStatus.OK);
-
-    }
+//    @GetMapping
+//    public ResponseEntity getUsers(@Positive @RequestParam int page, @Positive @RequestParam int size) {
+//        Page<User> pageUsers = userService.findUsers(page -1, size);
+//        List<User> users = pageUsers.getContent();
+//
+//        return new ResponseEntity(mapper.userToUserResponse(users),HttpStatus.OK);
+//
+//    }
 
 }

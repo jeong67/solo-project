@@ -2,7 +2,7 @@ package com.codestates.soloproject.exception;
 
 import lombok.Getter;
 
-public enum ExeptionCode {
+public enum ExceptionCode {
 
     USER_NOT_FOUND(404, "User not found"),
     USER_EXISTS(409, "User exists");
@@ -12,7 +12,7 @@ public enum ExeptionCode {
     @Getter
     private String message;
 
-    ExeptionCode(int code, String message) {
+    ExceptionCode(int code, String message) {
         this.status = code;
         this.message = message;
     }

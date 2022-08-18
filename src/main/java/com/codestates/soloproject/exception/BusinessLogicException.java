@@ -4,10 +4,10 @@ import lombok.Getter;
 
 public class BusinessLogicException extends RuntimeException {
     @Getter
-    private ExeptionCode exeptionCode;
+    private ExceptionCode exceptionCode;
 
-    public BusinessLogicException(ExeptionCode exeptionCode) {
-        super(exeptionCode.getMessage());
-        this.exeptionCode = exeptionCode;
+    public BusinessLogicException(ExceptionCode exceptionCOde) {
+        super(exceptionCOde.getMessage());
+        this.exceptionCode = exceptionCOde;
     }
 }

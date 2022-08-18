@@ -2,7 +2,7 @@ package com.codestates.soloproject.user.service;
 
 
 import com.codestates.soloproject.exception.BusinessLogicException;
-import com.codestates.soloproject.exception.ExeptionCode;
+import com.codestates.soloproject.exception.ExceptionCode;
 import com.codestates.soloproject.user.entity.User;
 import com.codestates.soloproject.user.repository.UserRepository;
 import org.springframework.data.domain.Page;
@@ -57,14 +57,14 @@ public class UserService {
                 userRepository.findById(userId);
         User findUser =
                 optionalUser.orElseThrow(() ->
-                        new BusinessLogicException(ExeptionCode.USER_NOT_FOUND));
+                        new BusinessLogicException(ExceptionCode.USER_NOT_FOUND));
         return findUser;
 
     }
 
     private void verifyExistsEmail(String email) {
-        Optional<User> user = userRepository.findByEmail(email);
-        if(user.isPresent())
-            throw new BusinessLogicException(ExeptionCode.USER_EXISTS);
+//        Optional<User> user = userRepository.findByEmail(email);
+//        if(user.isPresent())
+//            throw new BusinessLogicException(ExceptionCode.USER_EXISTS);
     }
 }
